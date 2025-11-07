@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <link rel="stylesheet" href="../../assets/css/word-scramble.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 Word Scramble</h1>
+        
+        <div class="score-container">
+            <div class="score-item">
+                Score: <span id="score">0</span>
+            </div>
+            <div class="score-item">
+                Streak: <span id="streak">0</span>🔥
+            </div>
+        </div>
+
+        <div class="word-display" id="scrambledWord"></div>
+        <div class="hint" id="hint"></div>
+
+        <div class="message" id="message"></div>
+
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type your answer..." >
+        </div>
+
+        <div class="button-container">
+            <button class="check-btn" onclick="checkAnswer()">Check</button>
+            <button class="refresh-btn" onclick="scrambleCurrentWord()">🔄 Shuffle</button>
+            <button class="skip-btn" onclick="skipWord()">Skip</button>
+        </div>
+
+        <div class="stats">
+            <p>Correct: <strong id="correct">0</strong> | Wrong: <strong id="wrong">0</strong></p>
+        </div>
+    </div>
+
+   <script src="../../assets/js/word-scramble.js"></script>
+</body>
+</html>
